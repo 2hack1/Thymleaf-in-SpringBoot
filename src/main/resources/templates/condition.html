@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+          <h1>USER IS <span th:style="${check}?'color:green':'color:red'" th:text="${check}?'ACTIVE':'NOT ACTIVE'"></span></h1>
+        <!-- if-unless like work (if-else) -->
+        <h1 th:if="${xender}=='male'">MALE</h1>
+        <h1 th:unless="${xender}=='male'">FEMAIL</h1>
+        <div th:switch=${#lists.size(item)}> 
+        
+        <h1 th:case="'0'">List is empty</h1>
+        <h1 th:case="'2'">two item in the list</h1>
+        <h1 th:case="'3'">three item in the list</h1>
+        <h1 th:case="'4'">four item in the list</h1>
+       
+       <!-- this is a default type case -->
+        <h1 th:case="*">more item in the list</h1>
+        
+        </div>
+        
+</body>
+</html>

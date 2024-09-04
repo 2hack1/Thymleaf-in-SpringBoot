@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+               <h1>this page use for check loop run</h1>
+               <h1 th:text="${names}"></h1>
+              <!--the (var) is a varible and copy values of (names) because names is a list and multi value store
+                  index of value in ( status ) --> 
+               <li th:each="var,status:${names}">
+                   
+                   <span th:style="${status.odd}?'color:red;font-weight:bold':' ' " th:text="${status.index+1}+''+${var}"></span>
+                </li>
+</body>
+</html>

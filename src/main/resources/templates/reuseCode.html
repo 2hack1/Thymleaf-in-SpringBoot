@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+<title>Insert title here</title>
+</head>
+<body>
+
+        <h1> when i use the code in  </h1>
+        
+        <!--insert , include,replace   -->
+        
+<!--                                             <!-- local data (kapil , agarawal -->
+ <footer id ="hosting" th:insert="footer::footer1(kapil,agrawal)"> this is my</footer>
+ -->                                                      <!-- dynamic data by a Controller data (kapil , agarawal -->
+          <footer id ="hosting" th:insert="footer::footer1(${Title},${subtitle})"> this is my</footer>
+ 
+               <h1> i am check every things</h1>
+               <h1> i am check every things</h1>
+               <h1> i am check every things</h1>
+               <h1> i am check every things</h1>
+</body>
+</html>
